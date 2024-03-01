@@ -50,3 +50,13 @@ var maxProfit = function(prices) {
     profitFinal = profitArr.reduce((a,c) => {return a + c},0)
     return profitFinal
 };
+
+var maxProfit = function(prices) {
+    let total = 0
+    for (let i = 1; i < prices.length; i++ ){
+        if(prices[i] > prices[i-1]){
+            total += prices[i] - prices[i-1]
+        }
+    }
+    return total
+};
